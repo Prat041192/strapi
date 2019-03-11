@@ -231,8 +231,7 @@ describe('Test CTB', () => {
   });
 
   after(() => {
-    cy.wait(10000)
-      .deleteApi('tag', jwt)
+    cy.deleteApi('tag', jwt)
       .deleteApi('produit', jwt)
       .deleteUser(userId, jwt);
   });
